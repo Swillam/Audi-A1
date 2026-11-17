@@ -22,7 +22,11 @@
   "signals": [
     {"id": "A1_RANGE", "path": "Trips", "fmt": { "len": 16, "max": 2000, "unit": "kilometers" }, "name": "Range remaining", "suggestedMetric": "fuelRange"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "cmd": {"01": "2F"}, "freq": 5,
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"01": "2F"}, "freq": 5, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_FLI", "path": "Fuel", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 237, "unit": "percent" }, "name": "Fuel tank level", "suggestedMetric": "fuelTankLevel", "description": "The 8X engine ECU reports a full tank as 0xED (237) instead of 0xFF, so the level is scaled to 237."}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"01": "2F"}, "freq": 5, "filter": { "from": 2019 },
   "signals": [
     {"id": "A1_FLI", "path": "Fuel", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Fuel tank level", "suggestedMetric": "fuelTankLevel"}
   ]}
