@@ -2,6 +2,14 @@
     { "hdr": "7E0", "type": "engine" }
   ],
   "commands": [
+{ "hdr": "712", "rax": "77C", "dbg": true, "cmd": {"22": "1812"}, "freq": 1, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_SWA", "path": "Control", "fmt": { "len": 16, "max": 4095.875, "min": -4096, "div": 8, "sign": true, "unit": "degrees" }, "name": "Steering wheel angle"}
+  ]},
+{ "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "1816"}, "freq": 1, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_BRAKE_P", "path": "Control", "fmt": {"bix": 8, "len": 16, "max": 327.67, "div": 100, "sign": true, "unit": "bars" }, "name": "Brake pressure"}
+  ]},
 { "hdr": "714", "rax": "77E", "cmd": {"22": "1014"}, "freq": 5,
   "signals": [
     {"id": "A1_AAT", "path": "Climate", "fmt": { "len": 8, "max": 77.5, "min": -50, "div": 2, "add": -50, "unit": "celsius" }, "name": "Ambient air temperature (cluster)"}
@@ -18,9 +26,29 @@
   "signals": [
     {"id": "A1_FLV", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "liters" }, "name": "Fuel remaining", "suggestedMetric": "fuelTankLevel"}
   ]},
+{ "hdr": "714", "rax": "77E", "dbg": true, "cmd": {"22": "224B"}, "freq": 3600, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_OIL_WEAR", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Oil thermal wear"}
+  ]},
 { "hdr": "714", "rax": "77E", "cmd": {"22": "2294"}, "freq": 30,
   "signals": [
     {"id": "A1_RANGE", "path": "Trips", "fmt": { "len": 16, "max": 2000, "unit": "kilometers" }, "name": "Range remaining", "suggestedMetric": "fuelRange"}
+  ]},
+{ "hdr": "714", "rax": "77E", "dbg": true, "cmd": {"22": "2299"}, "freq": 30, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_FUEL_AVG", "path": "Trips", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "liters" }, "name": "Average fuel consumption", "description": "Long-term average shown by the instrument cluster, in liters per 100 km."}
+  ]},
+{ "hdr": "746", "rax": "7B0", "dbg": true, "cmd": {"22": "2605"}, "freq": 5, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_REFRIG_P", "path": "Climate", "fmt": { "len": 8, "max": 51, "div": 5, "unit": "bars" }, "name": "Refrigerant pressure"}
+  ]},
+{ "hdr": "746", "rax": "7B0", "dbg": true, "cmd": {"22": "2607"}, "freq": 5, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_RAD_FAN_DUTY", "path": "Climate", "fmt": { "len": 8, "max": 102, "div": 2.5, "unit": "percent" }, "name": "Radiator fan commanded duty"}
+  ]},
+{ "hdr": "746", "rax": "7B0", "dbg": true, "cmd": {"22": "2609"}, "freq": 5, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_AAT_HVAC", "path": "Climate", "fmt": { "len": 8, "max": 77.5, "min": -50, "div": 2, "add": -50, "unit": "celsius" }, "name": "Ambient air temperature (climate control)"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "cmd": {"01": "2F"}, "freq": 5, "filter": { "to": 2018 },
   "signals": [
@@ -29,6 +57,10 @@
 { "hdr": "7E0", "rax": "7E8", "cmd": {"01": "2F"}, "freq": 5, "filter": { "from": 2019 },
   "signals": [
     {"id": "A1_FLI", "path": "Fuel", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Fuel tank level", "suggestedMetric": "fuelTankLevel"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "15B8"}, "freq": 60, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_OIL_LVL", "path": "Engine", "fmt": { "len": 16, "max": 262.14, "div": 250, "unit": "millimeters" }, "name": "Oil level, last dynamic measurement"}
   ]}
 ]
 }

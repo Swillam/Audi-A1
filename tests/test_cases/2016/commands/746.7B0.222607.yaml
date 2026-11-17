@@ -1,0 +1,5 @@
+command_id: 746.7B0.222607
+test_cases:
+- expected_values:
+    A1_RAD_FAN_DUTY: 0
+  response: 7B00462260700
