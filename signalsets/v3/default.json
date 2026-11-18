@@ -62,6 +62,14 @@
   "signals": [
     {"id": "A1_ENG_TQ", "path": "Engine", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Engine torque"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "101C"}, "freq": 5, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_ALTERNATOR_LOAD", "path": "Engine", "fmt": { "len": 16, "max": 100, "min": -327.68, "div": 100, "sign": true, "unit": "percent" }, "name": "Alternator load"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1130"}, "freq": 5, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_CLT_FAN_1_CMD_DUTY", "path": "Engine", "fmt": { "len": 16, "max": 100, "div": 100, "unit": "percent" }, "name": "Coolant fan 1, commanded duty"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "113F"}, "freq": 1, "filter": { "to": 2018 },
   "signals": [
     {"id": "A1_FUEL_RATE", "path": "Fuel", "fmt": { "len": 16, "max": 655.35, "div": 100, "unit": "litersPerHour" }, "name": "Fuel rate"}
@@ -78,6 +86,10 @@
   "signals": [
     {"id": "A1_MISFIRES_1000REV_C2", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires / 1000 revolutions, cylinder 2"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11A4"}, "freq": 1, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_FUEL_PMP_CMD_DUTY", "path": "Fuel", "fmt": { "len": 16, "max": 99.99, "mul": 0.0015258743, "unit": "percent" }, "name": "Fuel pump, commanded duty"}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11BA"}, "freq": 60, "filter": { "to": 2018 },
   "signals": [
     {"id": "A1_OIL_LEVEL", "path": "Engine", "fmt": { "len": 16, "max": 26.2, "div": 2500, "unit": "centimeters" }, "name": "Oil level"}
@@ -85,6 +97,22 @@
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11F0"}, "freq": 1, "filter": { "to": 2018 },
   "signals": [
     {"id": "A1_ACT_TURBO_BOOST", "path": "Engine", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "kilopascal" }, "name": "Actual turbo boost", "suggestedMetric": "absoluteBoostPressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "120E"}, "freq": 5, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_KNOCK_SENS_CYL_1", "path": "Engine", "fmt": { "len": 16, "max": 317, "mul": 0.0048489933, "unit": "volts" }, "name": "Knock sensor, cylinder 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "120F"}, "freq": 5, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_KNOCK_SENS_CYL_3", "path": "Engine", "fmt": { "len": 16, "max": 317, "mul": 0.0048489933, "unit": "volts" }, "name": "Knock sensor, cylinder 3"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1210"}, "freq": 5, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_KNOCK_SENS_CYL_4", "path": "Engine", "fmt": { "len": 16, "max": 317, "mul": 0.0048489933, "unit": "volts" }, "name": "Knock sensor, cylinder 4"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1211"}, "freq": 5, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_KNOCK_SENS_CYL_2", "path": "Engine", "fmt": { "len": 16, "max": 317, "mul": 0.0048489933, "unit": "volts" }, "name": "Knock sensor, cylinder 2"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "128A"}, "freq": 30, "filter": { "to": 2018 },
   "signals": [
@@ -94,6 +122,10 @@
   "signals": [
     {"id": "A1_GEAR_V2", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear", "suggestedMetric": "gear"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "159F"}, "freq": 1, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_HIGH_FUEL_P_ACT", "path": "Fuel", "fmt": { "len": 16, "max": 327.675, "div": 200, "unit": "bars" }, "name": "High fuel pressure, actual", "description": "Rail pressure; about 140 bar at idle on the CZEA."}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "15B7"}, "freq": 5, "filter": { "to": 2018 },
   "signals": [
     {"id": "A1_ENG_OIL_SUMP_T", "path": "Engine", "fmt": { "len": 16, "max": 11336.3, "min": -460, "mul": 0.18, "add": -460, "unit": "fahrenheit" }, "name": "Engine oil sump temperature"}
@@ -101,6 +133,10 @@
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "15B8"}, "freq": 60, "filter": { "to": 2018 },
   "signals": [
     {"id": "A1_OIL_LVL", "path": "Engine", "fmt": { "len": 16, "max": 262.14, "div": 250, "unit": "millimeters" }, "name": "Oil level, last dynamic measurement"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "15B9"}, "freq": 60, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_OIL_LEVEL_AVG", "path": "Engine", "fmt": { "len": 16, "max": 262.14, "div": 250, "unit": "millimeters" }, "name": "Oil level, average dynamic value"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1633"}, "freq": 1, "filter": { "to": 2018 },
   "signals": [
