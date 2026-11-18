@@ -86,6 +86,22 @@
   "signals": [
     {"id": "A1_MISFIRES_1000REV_C2", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires / 1000 revolutions, cylinder 2"}
   ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "114F"}, "freq": 60, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_MISFIRES_C1", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires, cylinder 1, cumulative", "description": "Lifetime misfire counter kept by the engine ECU, not reset per trip."}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1150"}, "freq": 60, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_MISFIRES_C3", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires, cylinder 3, cumulative", "description": "Lifetime misfire counter kept by the engine ECU, not reset per trip."}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1151"}, "freq": 60, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_MISFIRES__CYL__4", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires, cylinder 4, cumulative", "description": "Lifetime misfire counter kept by the engine ECU, not reset per trip."}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1152"}, "freq": 60, "filter": { "to": 2018 },
+  "signals": [
+    {"id": "A1_MISFIRES__CYL__2", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires, cylinder 2, cumulative", "description": "Lifetime misfire counter kept by the engine ECU, not reset per trip."}
+  ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11A4"}, "freq": 1, "filter": { "to": 2018 },
   "signals": [
     {"id": "A1_FUEL_PMP_CMD_DUTY", "path": "Fuel", "fmt": { "len": 16, "max": 99.99, "mul": 0.0015258743, "unit": "percent" }, "name": "Fuel pump, commanded duty"}
