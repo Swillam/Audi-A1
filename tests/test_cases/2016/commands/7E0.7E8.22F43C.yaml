@@ -1,0 +1,5 @@
+command_id: 7E0.7E8.22F43C
+test_cases:
+- expected_values:
+    A1_EXH_GAS_T: 496.7
+  response: 7E80562F43C14F7
