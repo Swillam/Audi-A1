@@ -136,7 +136,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "14CB"}, "freq": 1, "filter": { "to": 2018 },
   "signals": [
-    {"id": "A1_GEAR_V2", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear", "suggestedMetric": "gear"}
+    {"id": "A1_GEAR_V2", "path": "Transmission", "fmt": { "len": 8, "max": 255, "nullmax": 255, "unit": "scalar" }, "name": "Gear", "suggestedMetric": "gear"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "159F"}, "freq": 1, "filter": { "to": 2018 },
   "signals": [
