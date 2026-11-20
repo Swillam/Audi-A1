@@ -4,7 +4,7 @@
   "commands": [
 { "hdr": "712", "rax": "77C", "dbg": true, "cmd": {"22": "1812"}, "freq": 1, "filter": { "to": 2018 },
   "signals": [
-    {"id": "A1_SWA", "path": "Control", "fmt": { "len": 16, "max": 4095.875, "min": -4096, "div": 8, "sign": true, "unit": "degrees" }, "name": "Steering wheel angle"}
+    {"id": "A1_SWA", "path": "Control", "fmt": { "len": 16, "max": 2047.9375, "min": -2048, "div": 16, "sign": true, "unit": "degrees" }, "name": "Steering wheel angle", "description": "Verified with full lock both ways on a 2016 A1: about +460 and -440 degrees."}
   ]},
 { "hdr": "713", "rax": "77D", "dbg": true, "cmd": {"22": "1816"}, "freq": 1, "filter": { "to": 2018 },
   "signals": [
